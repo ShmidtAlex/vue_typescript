@@ -5,21 +5,21 @@
         "body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad deleniti dolorem labore, nihil possimus similique?",
         "author": "Alexander",
         "datePosted": "2019-1-18",
-        "highlighted": "false"
+        "highlighted": false
       },
       {
         "title": "Look, I am blogging!",
         "body": "Animi aut consequatur illum incidunt mollitia, non rerum vitae. Aliquam aut commodi possimus ratione!",
         "author": "Alexander",
         "datePosted": "2019-1-18",
-        "highlighted": "true"
+        "highlighted": true
       },
       {
         "title": "Another one??",
         "body": "oops, there is no lorem ipsum",
         "author": "Annonimus",
         "datePosted": "2019-1-18",
-        "highlighted": "false"
+        "highlighted": false
       }
    ]
 }
