@@ -63,7 +63,7 @@
         }));
       });
     }
-    private monunted() {
+    private mounted() {
       console.log('the app is mounted');
     }
   }
