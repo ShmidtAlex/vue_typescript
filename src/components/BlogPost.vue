@@ -1,9 +1,11 @@
+
 <template>
     <div class="blogpost" :class="{ highlighted: post.highlighted}">
         <h2>{{ post.title }}</h2>
         <p v-if="post.highlighted">This post is highlighted!</p>
         <p>{{ post.body }}</p>
         <p class="meta">Written by {{ post.author }} on {{ date }}</p>
+
     </div>
 </template>
 <script lang="ts">
