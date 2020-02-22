@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <h1>{{ msg }} {{localMessage}}</h1>
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
       check out the
@@ -38,9 +38,23 @@
 import { Component, Prop, Vue } from 'vue-property-decorator';
 
 @Component
+//it's important, that this way of component registration creates component in local scope
 export default class HelloWorld extends Vue {
-  @Prop() private msg!: string;
+  @Prop() private msg!: string;//exclamation sign helps exclude this variable from strictPropertyInitialisation (tsconfig.json) property
+  //or we may change strictPorpertyInitialisation: false, but it will disable strict checking property for all project
+  localMessage: number = 1;
 }
+//for global components we should use this way:
+  Vue.component('my-component-name', {
+    //options
+  })
+  //we should be careful with global component, because they can fill up th global namespace!!! good way to use it for really needed global components:
+//   library.add(
+//           faBars,
+//           faCameraRetro
+//   );
+// Vue.component('font-awesome-icon', FontAwesomeIcon);
+  //now we can use tag <font-awesome-icon /> anywhere in project
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

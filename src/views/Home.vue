@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <HelloWorld :msg="msgLocal"/>
   </div>
 </template>
 
@@ -13,6 +13,12 @@ export default {
   name: 'Home',
   components: {
     HelloWorld
+  },
+  data: function(){
+    return {
+      msgLocal: "some typified data",
+    }
+
   }
 }
 </script>
